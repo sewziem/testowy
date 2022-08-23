@@ -6,6 +6,7 @@ file_dict = {
     't1':'C:\\Users\\Dell\\Desktop\\test_txt_files\\testowy1.txt',
     't2':'C:\\Users\\Dell\\Desktop\\test_txt_files\\testowy2.txt',
 }
+file_keys = file_dict.keys()
 
 def writing(arg_txt):  # editing document function
     while True:
@@ -28,20 +29,19 @@ while True:  # this way uses DICTIONARY
     my_choice = input('file doc - doc, exit - exit: ')
     print('choose modificated folder or exit')
     if my_choice == 'doc':
-        writing(file_dict[input('t1 or t2 :')])  # writing is my function
+        while True:
+            take_a_key = input(f'choose doc {file_keys}: ')
+            if take_a_key in file_keys:
+                writing(file_dict[take_a_key])  # writing is my function
+            elif take_a_key == 'exit':
+                break
+            else:
+                print('type again ')
+        
     elif my_choice == 'exit':
         break
     else:
         print('Wrong communicate. Type again.')
 
 
-# while True:  # this way uses LIST
-#     my_file = input('choose document: test1 or test2: ')
-#     if my_file == 'test1':
-#         writing(file_list[0])
-#     elif my_file == 'test2':
-#         writing(file_list[1])
-#     elif my_file == exit:
-#         break
-#     else:
-#         print('Wrong communicate. Type again.')
+
