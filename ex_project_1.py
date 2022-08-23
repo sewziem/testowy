@@ -3,10 +3,9 @@ now = datetime.now()
 file_list = ['testowy1.txt', 'testowy2.txt']
 
 file_dict = {
-    't1':'testowy1.txt',
-    't2':'testowy2.txt',
+    't1':'C:\\Users\\Dell\\Desktop\\test_txt_files\\testowy1.txt',
+    't2':'C:\\Users\\Dell\\Desktop\\test_txt_files\\testowy2.txt',
 }
-print(file_dict['t1'])
 
 def writing(arg_txt):  # editing document function
     while True:
@@ -29,13 +28,11 @@ while True:  # this way uses DICTIONARY
     my_choice = input('file doc - doc, exit - exit: ')
     print('choose modificated folder or exit')
     if my_choice == 'doc':
-        writing(file_dict[input()])# wpisać wybór na podstawie klucza słownika. Robota na jutro !!!!!!!!!!!!!!!!!!!) In this place program waiting for input.
+        writing(file_dict[input('t1 or t2 :')])  # writing is my function
     elif my_choice == 'exit':
         break
     else:
         print('Wrong communicate. Type again.')
-
-#  wypchnięcie pliku na github
 
 
 # while True:  # this way uses LIST
